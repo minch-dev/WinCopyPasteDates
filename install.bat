@@ -1,0 +1,1 @@
+REG ADD "HKEY_CLASSES_ROOT\Directory\shell\WinCopyPasteDates" /v @ /t REG_SZ /d %cd%/WinCopyPasteDates.ps1 /f
