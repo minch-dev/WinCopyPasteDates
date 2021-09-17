@@ -1,1 +1,2 @@
--[HKEY_CLASSES_ROOT\Directory\shell\WinCopyPasteDates]
+-[HKEY_CLASSES_ROOT\Directory\shell\WinCPDCopyDates]
+-[HKEY_CLASSES_ROOT\Directory\shell\WinCPDPasteDates]
