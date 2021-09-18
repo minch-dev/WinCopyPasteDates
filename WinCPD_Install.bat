@@ -8,4 +8,6 @@ REG ADD "HKEY_CLASSES_ROOT\*\shell\WinCPDCopyDates\command" /t REG_SZ /d "%cd%\C
 
 REG ADD "HKEY_CLASSES_ROOT\*\shell\WinCPDPasteDates" /t REG_SZ /d "Dates PASTE" /f
 REG ADD "HKEY_CLASSES_ROOT\*\shell\WinCPDPasteDates\command" /t REG_SZ /d "%cd%\PasteDates.bat \"%%L\" \"%%w\"" /f
+
+echo "Installation complete"
 pause
