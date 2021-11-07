@@ -1,6 +1,6 @@
-# WinCopyPasteDates
+# WinCopyPasteDates 1.0.4
 Windows context menu items (Dates COPY, Dates PASTE) that allow you to stash any file's dates (folders not supported yet) and then apply them to any other file.
-Written as simple .bat scripts and a .reg file for uninstallation
+Written as three simple .bat scripts and a .reg file for uninstallation
 
 # Installation
 Code-> Download ZIP, unzip into any folder that suits your needs, then Run WinCPD_Install.bat and allow running with administrative priviliges when asked. Alternatively you can open WinCPD_Install.bat with "Run as administrator" context menu option straight away. You can move the extension folder anywhere you want as long as you rerun the WinCPD_Install.bat afterwards.
