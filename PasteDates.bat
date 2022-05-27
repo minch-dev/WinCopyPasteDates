@@ -6,11 +6,12 @@ set FOLDER=%FOLDER:~0,-1%"
 echo %FILENAME%
 echo %FOLDER%
 
-set WINCPD=%TMP%\WinCPD
+cd /d %TMP%\WinCPD
+IF EXIST "DATES.0" set DATES="DATES.0"
+IF EXIST "DATES.1" set DATES="DATES.1"
 
-IF EXIST "%WINCPD%\DATES" (
- cd /d %WINCPD%
- rename "DATES" %FILENAME%
- robocopy "%WINCPD%" %FOLDER% %FILENAME% /COPY:T
- rename %FILENAME% "DATES"
+IF defined DATES (
+ rename %DATES% %FILENAME%
+ robocopy "." %FOLDER% %FILENAME% /COPY:T
+ rename %FILENAME% %DATES%
 )

@@ -2,3 +2,7 @@ Windows Registry Editor Version 5.00
 
 [-HKEY_CLASSES_ROOT\*\shell\WinCPDCopyDates]
 [-HKEY_CLASSES_ROOT\*\shell\WinCPDPasteDates]
+[-HKEY_CLASSES_ROOT\lnkfile\shell\WinCPDCopyDates]
+[-HKEY_CLASSES_ROOT\lnkfile\shell\WinCPDPasteDates]
+# [-HKEY_CLASSES_ROOT\InternetShortcut\shell\WinCPDCopyDates]
+# [-HKEY_CLASSES_ROOT\InternetShortcut\shell\WinCPDPasteDates]

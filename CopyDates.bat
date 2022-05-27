@@ -6,9 +6,13 @@ set FOLDER=%FOLDER:~0,-1%"
 echo %FILENAME%
 echo %FOLDER%
 
-set WINCPD=%TMP%\WinCPD
 
-del /F /Q "%WINCPD%\DATES"
-robocopy %FOLDER% "%WINCPD%" %FILENAME% /COPY:T /CREATE
-cd /d %WINCPD%
-rename %FILENAME% "DATES"
+cd /d "%TMP%\WinCPD"
+robocopy %FOLDER% "." %FILENAME% /COPY:T /CREATE
+IF EXIST "DATES.0" (
+del /F /Q "DATES.0"
+rename %FILENAME% "DATES.1"
+) ELSE (
+del /F /Q "DATES.1"
+rename %FILENAME% "DATES.0"
+)

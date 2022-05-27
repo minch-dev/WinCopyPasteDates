@@ -10,5 +10,17 @@ REG ADD "HKEY_CLASSES_ROOT\*\shell\WinCPDCopyDates\command" /t REG_SZ /d "%cd%\C
 REG ADD "HKEY_CLASSES_ROOT\*\shell\WinCPDPasteDates" /t REG_SZ /d "Dates PASTE" /f
 REG ADD "HKEY_CLASSES_ROOT\*\shell\WinCPDPasteDates\command" /t REG_SZ /d "%cd%\PasteDates.bat \"%%L\"" /f
 
+REG ADD "HKEY_CLASSES_ROOT\lnkfile\shell\WinCPDCopyDates" /t REG_SZ /d "Dates COPY" /f
+REG ADD "HKEY_CLASSES_ROOT\lnkfile\shell\WinCPDCopyDates\command" /t REG_SZ /d "%cd%\CopyDates.bat \"%%L\"" /f
+
+REG ADD "HKEY_CLASSES_ROOT\lnkfile\shell\WinCPDPasteDates" /t REG_SZ /d "Dates PASTE" /f
+REG ADD "HKEY_CLASSES_ROOT\lnkfile\shell\WinCPDPasteDates\command" /t REG_SZ /d "%cd%\PasteDates.bat \"%%L\"" /f
+
+:REG ADD "HKEY_CLASSES_ROOT\InternetShortcut\shell\WinCPDCopyDates" /t REG_SZ /d "Dates COPY (.URL)" /f
+:REG ADD "HKEY_CLASSES_ROOT\InternetShortcut\shell\WinCPDCopyDates\command" /t REG_SZ /d "%cd%\CopyDates.bat \"%%L\"" /f
+
+:REG ADD "HKEY_CLASSES_ROOT\InternetShortcut\shell\WinCPDPasteDates" /t REG_SZ /d "Dates PASTE (.URL)" /f
+:REG ADD "HKEY_CLASSES_ROOT\InternetShortcut\shell\WinCPDPasteDates\command" /t REG_SZ /d "%cd%\PasteDates.bat \"%%L\"" /f
+
 echo Installation complete
 pause
