@@ -1,17 +1,19 @@
 chcp 65001
 echo off
-set FILENAME="%~nx1"
-set FOLDER="%~dp1
-set FOLDER=%FOLDER:~0,-1%"
-echo %FILENAME%
-echo %FOLDER%
+SETLOCAL EnableDelayedExpansion
+set FILENAME=%~nx1
+set FOLDER=%~dp1
+set FOLDER=%FOLDER:~0,-1%
 
-cd /d %TMP%\WinCPD
-IF EXIST "DATES.0" set DATES="DATES.0"
-IF EXIST "DATES.1" set DATES="DATES.1"
+for %%a in ("%TMP%\WinCPD\*.DATES") do (
+set DATES=%%~nxa
+)
 
 IF defined DATES (
- rename %DATES% %FILENAME%
- robocopy "." %FOLDER% %FILENAME% /COPY:T
- rename %FILENAME% %DATES%
+ cd /d %TMP%\WinCPD
+ rename "%DATES%" "%FILENAME%"
+ robocopy "." "%FOLDER%" "%FILENAME%" /DCOPY:X /COPY:T  /R:0
+ rename "%FILENAME%" "%DATES%"
 )
+
+ENDLOCAL

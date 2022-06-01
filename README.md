@@ -1,4 +1,4 @@
-# WinCopyPasteDates 1.0.6
+# WinCopyPasteDates 1.1.0
 Windows context menu items (Dates COPY, Dates PASTE) that allow you to stash any file's dates (folders not supported yet) and then apply them to any other file.
 Written as three simple .bat scripts and a .reg file for uninstallation
 
@@ -9,7 +9,10 @@ Code-> Download ZIP, unzip into any folder that suits your needs, then Run WinCP
 Use WinCPD_Unistall.reg that will wipe WinCPD's context menu entries from registry. That's it.
 
 # How It Works
-WinCopyPasteDates works with built in tools only so the resulting script is just a few lines of commands in batch files. Robocopy is used to store the dummy zero-length DATES.0/DATES.1 file with copied dates in the %TMP%\WinCPD directory so that you can apply them to any file with robocopy again, so it doesn't mess with the clipboard at all and is even reboot-percistent to a degree.
+WinCopyPasteDates works with built in tools only so the resulting script is just a few lines of commands in batch files. Robocopy is used to store the dummy zero-length .DATES file with copied dates in the %TMP%\WinCPD directory, so it doesn't mess with the clipboard at all and is even reboot-percistent to a degree.
+
+# Fixing problems
+Previous versions could turn some of the folders where you copy-pasted dates into system-hidden in some cases, to fix this run this cmd `attrib -h -s "D:\path to your folder"`
 
 # To DO
 Planning to add folders and copying attributes as well, but I have other priorities and this extension suites my needs perfectly for now, so maybe later
