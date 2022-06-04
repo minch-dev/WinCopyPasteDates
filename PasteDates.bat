@@ -1,6 +1,6 @@
 chcp 65001
 echo off
-SETLOCAL EnableDelayedExpansion
+SETLOCAL
 set FILENAME=%~nx1
 set FOLDER=%~dp1
 set FOLDER=%FOLDER:~0,-1%
@@ -15,5 +15,4 @@ IF defined DATES (
  robocopy "." "%FOLDER%" "%FILENAME%" /DCOPY:X /COPY:T  /R:0
  rename "%FILENAME%" "%DATES%"
 )
-
 ENDLOCAL

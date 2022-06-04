@@ -4,10 +4,8 @@ SETLOCAL
 set FILENAME=%~nx1
 set FOLDER=%~dp1
 set FOLDER=%FOLDER:~0,-1%
-echo %FILENAME%
-echo %FOLDER%
 
-del /F /Q "%TMP%\WinCPD\*.DATES"
+del /F /Q "%TMP%\WinCPD\*"
 robocopy "%FOLDER%" "%TMP%\WinCPD" "%FILENAME%" /DCOPY:X /COPY:T /R:0 /CREATE
 
 :https://ss64.com/nt/syntax-stampme.html
