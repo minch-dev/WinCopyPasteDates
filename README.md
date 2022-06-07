@@ -1,4 +1,4 @@
-# WinCopyPasteDates 1.1.1
+# WinCopyPasteDates 1.1.2
 Windows context menu items (Dates COPY, Dates PASTE) that allow you to stash any file's dates (folders not supported yet) and then apply them to any other file.
 Written as three simple .bat scripts and a .reg file for uninstallation
 
