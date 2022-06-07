@@ -15,4 +15,5 @@ IF defined DATES (
  robocopy "." %FOLDER% %FILENAME% /DCOPY:X /COPY:T  /R:0
  rename %FILENAME% "%DATES%"
 )
+
 ENDLOCAL
