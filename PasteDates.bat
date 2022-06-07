@@ -10,7 +10,7 @@ set DATES=%%~nxa
 )
 
 IF defined DATES (
- cd /d %TMP%\WinCPD
+ cd /d "%TMP%\WinCPD"
  rename "%DATES%" %FILENAME%
  robocopy "." %FOLDER% %FILENAME% /DCOPY:X /COPY:T  /R:0
  rename %FILENAME% "%DATES%"
